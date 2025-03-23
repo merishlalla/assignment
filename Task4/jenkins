@@ -1,0 +1,24 @@
+Jenkinsfile (Declarative Pipeline)
+/* Requires the Docker Pipeline plugin */
+pipeline {
+    agent { docker { image 'python:3.13.2-alpine3.21' } }
+    stages {
+        stage('check') {
+            steps {
+                sh 'python3 helloworld.py'
+            }
+        }
+        stage('test') {
+            sh 'python3 tests/unittests.py'
+        }
+        stage ('build'){
+            sh 'docker build -f Dockerfile .'
+        }
+
+        stage ('deploy'){
+            sh 'docker run -d -p 8080:80 hello_world' 
+        }
+        
+
+    }
+}
