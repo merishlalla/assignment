@@ -92,7 +92,8 @@ We now have detected an issue however the automated alert only specifies "Error 
 Metrics and Monitoring wise:
 
 - If Service A is new, add metrics to EVERYTHING. Then define the alerting on this. It's better to have and not need in comparison to need and not have.
+    - This will only be a predefined period of time. My logic is: "If component x doesn't break now, it likely won't break unless we change it a lot and we know what or how we're changing it."
 
-- If Service B is older: Refine what's actionable. Configure and reconfgure alerts if necessary. 
-    
+- If Service B is older: Refine what's actionable. Configure and reconfgure monitoring and alerts if necessary. 
+    - Maybe encourage a code clean up? Yes it's working but doesn't mean it can't be improved. Example if this was built 10 years ago and never touched again, likely we can update it to the latest code version (example Python 2.6 -> 3 -> 3.latest [Gradual upgrade to assess and minimize the impact]. This can also be mitigated with an immediate roll back if things go sideways.)
 

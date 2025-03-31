@@ -17,8 +17,7 @@ pipeline {
 
         stage ('deploy'){
             sh 'docker run -d -p 8080:80 hello_world' 
-        }
-        
+        }   
 
     }
 }

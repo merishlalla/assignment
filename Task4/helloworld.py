@@ -1,4 +1,4 @@
 
-class HelloWorld(self):
+class HelloWorld():
     def test(self):
         return ("Hello World")
