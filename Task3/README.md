@@ -27,6 +27,7 @@ These are the questions I'd ask myself or the team:
                     TimeZone: [{DaylightSavings: boolean}]
                 }
 
+
 The following checks need to be done as data and monitoring needs to be actionable. This stems from the Google SRE belief that all alerts should be actionable. Because actionable has been said, we also need to define this.
 
 Actionable definition can also be based on SLA:
